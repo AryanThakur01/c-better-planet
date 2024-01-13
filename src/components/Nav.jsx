@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const Nav = () => {
   return (
-    <nav className="h-16 flex items-center container sticky top-0 bg-white">
+    <nav className="h-16 flex items-center container sticky top-0 bg-white z-50">
       <Link href="/">CleenHearts</Link>
       <ul className="container flex justify-end gap-4 text-primary">
         <li>
