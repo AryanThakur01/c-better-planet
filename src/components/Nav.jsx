@@ -6,7 +6,7 @@ import MobileNavMenu from "./MobileNavMenu";
 
 const Nav = () => {
   return (
-    <nav className="h-16 flex justify-between items-center container sticky top-0 bg-white z-50">
+    <nav className="h-16 flex justify-between items-center container sticky top-0 bg-white z-50 shadow-lg">
       <Link href="/">CleenHearts</Link>
       <ul className="container hidden lg:flex justify-end gap-4 text-primary">
         <li>
@@ -42,7 +42,7 @@ const Nav = () => {
           <Heart fill="white" />
           <span>Donate now</span>
         </Button>
-        <div className="inline-block md:hidden">
+        <div className="inline-block lg:hidden">
           <MobileNavMenu>
             <Menu />
           </MobileNavMenu>
