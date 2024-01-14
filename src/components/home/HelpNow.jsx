@@ -1,11 +1,5 @@
 import { assets } from "@/assets/assets";
-import {
-  ChevronsRight,
-  Circle,
-  CircleDollarSign,
-  PiggyBank,
-  UsersRound,
-} from "lucide-react";
+import { ChevronsRight, Circle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";

@@ -6,14 +6,14 @@ import { ChevronsRight } from "lucide-react";
 const Hero = () => {
   return (
     <div
-      className="h-[70vh] min-h-[27rem] overflow-hidden flex flex-col justify-center container"
+      className="md:h-[70vh] h-[40rem] min-h-[27rem] overflow-hidden flex flex-col justify-center container relative z-10"
       style={{
         background: `url(${assets.HomeHero.src})no-repeat center center/cover`,
-        backgroundColor: "black",
       }}
     >
+      <div className="absolute h-full w-full z-[-1] inset-0 bg-black opacity-65" />
       <Button
-        className="rounded-full w-56 bg-white text-black font-bold"
+        className="rounded-full w-56 text-secondary hover:bg-secondary/10 hover:text-secondary font-bold border-secondary bg-transparent"
         variant="outline"
       >
         Give a helping hand for child

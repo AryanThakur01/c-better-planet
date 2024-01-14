@@ -14,12 +14,12 @@ const DonationCard = ({ image, goal, raised, title }) => {
         className="h-60 rounded-2xl w-full"
       />
       <div className="relative bottom-8 bg-muted shadow w-4/5 mx-auto p-4 rounded-lg">
-        <div className="h-2 w-full border-primary border rounded-full mt-4">
+        <div className="h-2 w-full border-secondary-foreground border rounded-full mt-4">
           <div
-            className="h-full bg-primary rounded-r-full"
+            className="h-full bg-secondary-foreground rounded-r-full"
             style={{ width: (raised / goal) * 100 + "%" }}
           ></div>
-          <p className="relative bottom-6 text-xs">
+          <p className="relative bottom-6 text-xs text-secondary-foreground">
             {((raised / goal) * 100).toFixed(0)}%
           </p>
         </div>

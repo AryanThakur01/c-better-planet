@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 const WhoWeAre = () => {
   return (
     <section className="container grid grid-cols-1 md:grid-cols-2 pb-20 items-center gap-8">
-      <div>
+      <div className="md:order-1 order-2">
         <div className="flex font-bold items-center text-primary/80">
           <Circle size={16} className="relative fill-primary" />
           <Circle size={16} className="relative right-2" />
@@ -21,7 +21,7 @@ const WhoWeAre = () => {
           aspernaturaut odit aut fugit, sed quia consequuntur. Dicta sunt
           explicabo. Nemo enim ipsam voluptatem quia voluptas.
         </p>
-        <div className="my-12 flex gap-4">
+        <div className="my-12 flex gap-4 flex-wrap">
           <Button className="flex gap-2 h-12">
             <span>Become A Volunteer</span>
             <HelpingHand className="bg-secondary rounded h-8 w-8 p-1" />
@@ -32,7 +32,7 @@ const WhoWeAre = () => {
           </Button>
         </div>
       </div>
-      <div>
+      <div className="order-1">
         <Image
           src={assets.HomeHero}
           height={1000}

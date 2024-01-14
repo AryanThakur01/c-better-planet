@@ -1,13 +1,14 @@
-import { Heart, ShoppingCart } from "lucide-react";
+import { Heart, Menu, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
+import MobileNavMenu from "./MobileNavMenu";
 
 const Nav = () => {
   return (
-    <nav className="h-16 flex items-center container sticky top-0 bg-white z-50">
+    <nav className="h-16 flex justify-between items-center container sticky top-0 bg-white z-50">
       <Link href="/">CleenHearts</Link>
-      <ul className="container flex justify-end gap-4 text-primary">
+      <ul className="container hidden lg:flex justify-end gap-4 text-primary">
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -37,10 +38,15 @@ const Nav = () => {
         <Button variant={"outline"}>
           <ShoppingCart />
         </Button>
-        <Button className="flex items-center gap-2 bg-secondary hover:bg-secondary">
+        <Button className="hidden md:flex items-center gap-2 bg-secondary hover:bg-secondary">
           <Heart fill="white" />
           <span>Donate now</span>
         </Button>
+        <div className="inline-block md:hidden">
+          <MobileNavMenu>
+            <Menu />
+          </MobileNavMenu>
+        </div>
       </div>
     </nav>
   );

@@ -50,7 +50,7 @@ const About = () => {
         <h2 className="text-5xl text-primary my-8">
           Helping Each Other can Make World Better
         </h2>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center flex-wrap md:flex-nowrap">
           <Image
             src={assets.HomeHero}
             height={200}
@@ -62,7 +62,7 @@ const About = () => {
             grantmaking, and employee engagement strategies.
           </p>
         </div>
-        <div className="my-8 border-t border-b py-4 flex justify-center gap-8 flex-col md:flex-row">
+        <div className="my-8 border-t border-b py-4 flex justify-center gap-4 flex-col md:flex-row">
           {quantities.map((item) => (
             <QuantityCard {...item} key={item.title} />
           ))}
@@ -72,7 +72,7 @@ const About = () => {
             <ChevronsRight className="bg-primary rounded-full h-8 w-8 p-1" />
             <span className="text-primary">More About Us</span>
           </Button>
-          <div className="px-8 flex items-center border-l-2 gap-4">
+          <div className="md:px-8 flex items-center md:border-l-2 gap-4">
             <div className="border rounded-full p-2 border-primary">
               <PhoneCall className="h-8 w-8 fill-primary/80 stroke-none" />
             </div>
