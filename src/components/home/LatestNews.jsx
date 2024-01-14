@@ -15,27 +15,27 @@ const LatestNews = () => {
     {
       image: assets.HomeHero,
       title: "Lorem ipsum dolor sit, amet ",
-      date: "3 Sep",
+      date: "03 Sep",
     },
     {
       image: assets.HomeHero,
       title: "Lorem ipsum dolor sit, amet ",
-      date: "3 Sep",
+      date: "03 Sep",
     },
     {
       image: assets.HomeHero,
       title: "Lorem ipsum dolor sit, amet ",
-      date: "3 Sep",
+      date: "03 Sep",
     },
     {
       image: assets.HomeHero,
       title: "Lorem ipsum dolor sit, amet ",
-      date: "3 Sep",
+      date: "03 Sep",
     },
     {
       image: assets.HomeHero,
       title: "Lorem ipsum dolor sit, amet ",
-      date: "3 Sep",
+      date: "03 Sep",
     },
   ];
   return (
@@ -45,7 +45,7 @@ const LatestNews = () => {
         <Circle size={16} className="relative right-2" />
         <p className="text-sm">OUR LATEST NEWS</p>
       </div>
-      <h2 className="text-4xl text-primary my-2 md:w-1/3">
+      <h2 className="font-bold text-3xl md:text-5xl text-primary my-2 md:w-1/2">
         Latest News And Articles From Clean Heart
       </h2>
       <Carousel className="w-full my-8 mb-20">

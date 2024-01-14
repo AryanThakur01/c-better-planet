@@ -43,7 +43,7 @@ const HelpAndDonate = () => {
     },
   ];
   return (
-    <section className="container bg-primary/70 pt-16 flex flex-col items-center mb-40">
+    <section className="container bg-[#3c2343] pt-16 flex flex-col items-center mb-40">
       <h2 className="text-center text-white text-2xl font-bold">
         HELP & DONATE US
       </h2>

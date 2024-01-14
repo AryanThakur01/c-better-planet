@@ -36,25 +36,30 @@ const Testimonials = () => {
     },
   ];
   return (
-    <section className="container bg-card py-20">
-      <div className="border border-black rounded-2xl p-8 md:p-16">
-        <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-16">
+    <section className="container py-20 bg-[#3c2343]">
+      <div className="border-2 border-white bg-background rounded-xl overflow-hidden">
+        <div className="grid md:grid-cols-2 grid-cols-1 p-8 md:p-16 items-center gap-16 bg-[#3c2343] text-white">
           <div>
-            <div className="flex font-bold items-center text-primary/80">
-              <Circle size={16} className="relative fill-primary" />
+            <div className="flex font-bold items-center">
+              <Circle size={16} className="relative fill-white" />
               <Circle size={16} className="relative right-2" />
               <span>Testimonials</span>
             </div>
-            <h2 className="text-4xl my-4">
+            <h2 className="text-3xl md:text-5xl my-4 font-bold">
               What They’re Talking About Clean Heart
             </h2>
           </div>
-          <div className="flex justify-center">
-            <Image src={assets.HomeHero} className="rounded-full h-40 w-max" />
+          <div
+            className="flex justify-center w-full h-full rounded-full"
+            style={{
+              background: `url(${assets.Lifestyle.src})no-repeat center center/cover`,
+            }}
+          >
+            {/* <Image src={} className="rounded-full h-40 w-max" /> */}
           </div>
         </div>
         <div>
-          <Carousel className="w-full">
+          <Carousel className="w-full m-8 md:m-16">
             <CarouselContent className="-ml-1 mt-8">
               {testimonials.map((item, index) => (
                 <CarouselItem key={index} className="pl-1">
@@ -70,23 +75,23 @@ const Testimonials = () => {
                     <div className="flex gap-2">
                       <Star
                         size={16}
-                        className="fill-secondary stroke-secondary"
+                        className="fill-orange-700 stroke-orange-700"
                       />
                       <Star
                         size={16}
-                        className="fill-secondary stroke-secondary"
+                        className="fill-orange-700 stroke-orange-700"
                       />
                       <Star
                         size={16}
-                        className="fill-secondary stroke-secondary"
+                        className="fill-orange-700 stroke-orange-700"
                       />
                       <Star
                         size={16}
-                        className="fill-secondary stroke-secondary"
+                        className="fill-orange-700 stroke-orange-700"
                       />
                       <Star
                         size={16}
-                        className="fill-secondary stroke-secondary"
+                        className="fill-orange-700 stroke-orange-700"
                       />
                     </div>
                   </div>

@@ -1,11 +1,11 @@
-import { Ubuntu } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const ubuntu = Ubuntu({
+const quickSand = Quicksand({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>
+      <body className={quickSand.className}>
         <Nav />
         {children}
         <Footer />

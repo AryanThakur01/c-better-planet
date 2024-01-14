@@ -5,8 +5,9 @@ import { Button } from "./ui/button";
 import MobileNavMenu from "./MobileNavMenu";
 
 const Nav = () => {
+  const DonateNow = () => {};
   return (
-    <nav className="h-16 flex justify-between items-center container sticky top-0 bg-white z-50 shadow-lg">
+    <nav className="h-16 flex justify-between items-center container sticky top-0 bg-white z-50">
       <Link href="/">CleenHearts</Link>
       <ul className="container hidden lg:flex justify-end gap-4 text-primary">
         <li>
@@ -38,8 +39,10 @@ const Nav = () => {
         <Button variant={"outline"}>
           <ShoppingCart />
         </Button>
-        <Button className="hidden md:flex items-center gap-2 bg-secondary hover:bg-secondary">
-          <Heart fill="white" />
+        <Button className="hidden md:flex items-center gap-2 bg-secondary hover:bg-secondary text-primary">
+          <span className="bg-primary rounded-full p-1">
+            <Heart fill="white" size={16} />
+          </span>
           <span>Donate now</span>
         </Button>
         <div className="inline-block lg:hidden">

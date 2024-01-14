@@ -6,14 +6,14 @@ import { Button } from "../ui/button";
 
 const WhoWeAre = () => {
   return (
-    <section className="container grid grid-cols-1 md:grid-cols-2 pb-20 items-center gap-8">
+    <section className="container grid grid-cols-1 md:grid-cols-2 pb-20 items-center gap-8 bg-[#efede6] py-16">
       <div className="md:order-1 order-2">
-        <div className="flex font-bold items-center text-primary/80">
-          <Circle size={16} className="relative fill-primary" />
+        <div className="flex font-bold items-center text-secondary-foreground">
+          <Circle size={16} className="relative fill-secondary-foreground" />
           <Circle size={16} className="relative right-2" />
           <span>WHO ARE WE</span>
         </div>
-        <h2 className="my-4 text-4xl">
+        <h2 className="my-4 text-3xl md:text-5xl font-bold">
           Inspiring and Helping for Better Lifestyle
         </h2>
         <p className="text-muted-foreground my-8">
