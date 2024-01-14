@@ -1,3 +1,4 @@
+import { assets } from "@/assets/assets";
 import TopCard from "@/components/TopCard";
 import OurTeam from "@/components/about/OurTeam";
 import RecentQuestions from "@/components/about/RecentQuestions";
@@ -8,7 +9,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <TopCard />
+      <TopCard title="About Us" image={assets.HomeHero} />
       <About />
       <Story />
       <OurTeam />

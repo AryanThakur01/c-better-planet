@@ -31,7 +31,7 @@ const Nav = () => {
           <Link href="/news">News</Link>
         </li>
         <li>
-          <Link href="/contact-us">Contact Us</Link>
+          <Link href="/contact">Contact Us</Link>
         </li>
       </ul>
       <div className="flex gap-4">
