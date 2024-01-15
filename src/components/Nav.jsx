@@ -5,35 +5,48 @@ import { Button } from "./ui/button";
 import MobileNavMenu from "./MobileNavMenu";
 
 const Nav = () => {
-  const DonateNow = () => {};
+  const navContent = [
+    { name: "Home", link: "/", subComps: [] },
+    { name: "About Us", link: "/about", subComps: [] },
+    { name: "Donations", link: "/donations", subComps: [] },
+    {
+      name: "Pages",
+      link: "",
+      subComps: [
+        { name: "Our Volunteer", link: "/pages/ourvolunteer" },
+        { name: "Become A Volunteer", link: "/pages/becomeavolunteer" },
+        { name: "Gallery", link: "/pages/gallery" },
+        { name: "FAQ", link: "/pages/faq" },
+      ],
+    },
+    { name: "Events", link: "/events", subComps: [] },
+    { name: "Contact", link: "/contact", subComps: [] },
+  ];
   return (
     <nav className="h-16 flex justify-between items-center container sticky top-0 bg-white z-50">
       <Link href="/">CleenHearts</Link>
-      <ul className="container hidden lg:flex justify-end gap-4 text-primary">
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About Us</Link>
-        </li>
-        <li>
-          <Link href="/donations">Donations</Link>
-        </li>
-        <li>
-          <Link href="/pages">Pages</Link>
-        </li>
-        <li>
-          <Link href="/events">Events</Link>
-        </li>
-        <li>
-          <Link href="/shop">Shop</Link>
-        </li>
-        <li>
-          <Link href="/news">News</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact Us</Link>
-        </li>
+      <ul className="container hidden lg:flex justify-end gap-4 text-primary font-semibold">
+        {navContent.map((item) => (
+          <li>
+            <div className="group">
+              <Link href={item.link}>{item.name}</Link>
+              {item.subComps?.length !== 0 && (
+                <div className="h-0 w-0 relative top-0 hidden group-hover:block hover:block">
+                  <div className="bg-white w-max h-fit p-2 flex flex-col gap-1 pt-6 text-sm font-semibold">
+                    {item.subComps.map((sub) => (
+                      <Link
+                        href={sub.link}
+                        className="hover:bg-secondary flex gap-2 p-2"
+                      >
+                        <span>{sub.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
       </ul>
       <div className="flex gap-4">
         <Button variant={"outline"}>

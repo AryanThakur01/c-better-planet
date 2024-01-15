@@ -10,8 +10,10 @@ const Contact = () => {
       <div className="hidden md:block">
         <Image src={assets.HomeHero} className="h-full rounded-xl" />
       </div>
-      <div className="p-8 flex flex-col gap-4 bg-secondary/30 rounded-2xl">
-        <h2 className="text-2xl text-primary">Leave Us A Message</h2>
+      <div className="p-12 flex flex-col gap-4 bg-secondary/30 rounded-2xl">
+        <h2 className="text-2xl md:text-3xl text-primary font-bold my-4">
+          Leave Us A Message
+        </h2>
         <input
           type="text"
           className="rounded-full p-4"
@@ -32,9 +34,9 @@ const Contact = () => {
           className="rounded-2xl p-4 resize-none h-36"
           placeholder="Write Message..."
         />
-        <Button className="bg-secondary flex gap-2 h-14 rounded-full hover:bg-secondary/90 w-44">
+        <Button className="bg-secondary flex gap-2 h-14 rounded-full hover:bg-secondary/90 w-44 font-bold">
           <ChevronsRight className="bg-primary rounded-full h-8 w-8 p-1" />
-          <span className="text-primary">More About Us</span>
+          <span className="text-primary">Send Message</span>
         </Button>
       </div>
     </section>
