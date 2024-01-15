@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -9,10 +10,33 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+} from "@radix-ui/react-accordion";
 import { Heart } from "lucide-react";
 import Link from "next/link";
+import { AccordionContent } from "./ui/accordion";
 
 const MobileNavMenu = ({ children }) => {
+  const navContent = [
+    { name: "Home", link: "/", subComps: [] },
+    { name: "About Us", link: "/about", subComps: [] },
+    { name: "Donations", link: "/donations", subComps: [] },
+    {
+      name: "Pages",
+      link: "",
+      subComps: [
+        { name: "Our Volunteer", link: "/pages/ourvolunteer" },
+        { name: "Become A Volunteer", link: "/pages/becomeavolunteer" },
+        { name: "Gallery", link: "/pages/gallery" },
+        { name: "FAQ", link: "/pages/faq" },
+      ],
+    },
+    { name: "Events", link: "/events", subComps: [] },
+    { name: "Contact", link: "/contact", subComps: [] },
+  ];
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -48,11 +72,39 @@ const MobileNavMenu = ({ children }) => {
             </SheetClose>
           </li>
           <li className="border-b border-b-muted-foreground">
-            <SheetClose asChild>
-              <Link href="/pages" className="block py-2">
-                Pages
-              </Link>
-            </SheetClose>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item" className="my-2 border-b-transparent">
+                <AccordionTrigger className="hover:no-underline py-0">
+                  Pages
+                </AccordionTrigger>
+                <AccordionContent className="flex flex-col gap-2 px-2 my-2">
+                  <Link
+                    href="/pages/ourvolunteer"
+                    className="py-2 w-full block text-start"
+                  >
+                    <SheetClose>Our Volunteer</SheetClose>
+                  </Link>
+                  <Link
+                    href="/pages/becomeavolunteer"
+                    className="py-2 w-full block text-start"
+                  >
+                    <SheetClose>Become A Volunteer</SheetClose>
+                  </Link>
+                  <Link
+                    href="/pages/gallery"
+                    className="py-2 w-full block text-start"
+                  >
+                    <SheetClose>Gallery</SheetClose>
+                  </Link>
+                  <Link
+                    href="/pages/faq"
+                    className="py-2 w-full block text-start"
+                  >
+                    <SheetClose>FAQs</SheetClose>
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </li>
           <li className="border-b border-b-muted-foreground">
             <SheetClose asChild>
