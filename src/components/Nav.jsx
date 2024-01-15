@@ -27,7 +27,7 @@ const Nav = () => {
       <Link href="/">CleenHearts</Link>
       <ul className="container hidden lg:flex justify-end gap-4 text-primary font-semibold">
         {navContent.map((item) => (
-          <li>
+          <li key={item.name}>
             <div className="group">
               <Link href={item.link}>{item.name}</Link>
               {item.subComps?.length !== 0 && (
@@ -37,6 +37,7 @@ const Nav = () => {
                       <Link
                         href={sub.link}
                         className="hover:bg-secondary flex gap-2 p-2"
+                        key={sub.name}
                       >
                         <span>{sub.name}</span>
                       </Link>
