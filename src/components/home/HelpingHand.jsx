@@ -41,7 +41,10 @@ const HelpingHand = () => {
       <div className="grid md:grid-cols-2 grid-cols-1 mt-8 gap-4">
         {/*%4 2 ya 3 hoga*/}
         {helpingHand.map((item, i) => (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 group overflow-hidden cursor-pointer">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 group overflow-hidden cursor-pointer"
+            key={item.title}
+          >
             <div
               className={cn(
                 "overflow-hidden rounded-xl bg-black",
