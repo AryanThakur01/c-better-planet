@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={quickSand.className}>
+      <body className={quickSand.className + " bg-white"}>
         <Nav />
         {children}
         <Footer />

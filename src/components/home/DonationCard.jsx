@@ -6,13 +6,15 @@ import { ChevronsRight } from "lucide-react";
 
 const DonationCard = ({ image, goal, raised, title }) => {
   return (
-    <div className="border p-4 mx-2 rounded-2xl bg-muted shadow-lg my-4">
-      <Image
-        src={assets.HomeHero}
-        height={500}
-        width={500}
-        className="h-60 rounded-2xl w-full"
-      />
+    <div className="border p-4 mx-2 rounded-2xl bg-muted shadow-lg my-4 group">
+      <div className="rounded-2xl overflow-hidden bg-primary">
+        <Image
+          src={assets.HomeHero}
+          height={500}
+          width={500}
+          className="h-60 w-full group-hover:scale-105 group-hover:opacity-50 transition-all duration-500"
+        />
+      </div>
       <div className="relative bottom-8 bg-muted shadow w-4/5 mx-auto p-4 rounded-lg">
         <div className="h-2 w-full border-secondary-foreground border rounded-full mt-4">
           <div

@@ -2,7 +2,7 @@ import React from "react";
 
 const TeamMember = ({ name, desiganation, image }) => {
   return (
-    <div className="border-2 border-secondary-foreground mx-8 rounded-t-full my-8 w-80">
+    <div className="border-2 border-secondary-foreground mx-8 rounded-t-full my-8 w-80 group">
       <div
         className="h-72 rounded-t-full overflow-hidden group flex flex-col relative top-8 left-8"
         style={{

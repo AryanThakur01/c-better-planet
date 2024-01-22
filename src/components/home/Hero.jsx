@@ -8,7 +8,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div
-      className="md:h-[70vh] min-h-[32rem] overflow-hidden flex flex-col justify-center container relative z-10 w-full border-[0.8rem] border-white rounded-[2rem]"
+      className="md:h-[95vh] min-h-[32rem] overflow-hidden flex flex-col justify-center container relative z-10 w-full border-[0.8rem] border-white rounded-[2rem]"
       style={{
         background: `url(${assets.HomeHero.src})no-repeat center center/cover`,
       }}

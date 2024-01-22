@@ -54,7 +54,7 @@ const Volunteers = () => {
     },
   ];
   return (
-    <section className="grid grid-cols-3 container gap-4 my-20">
+    <section className="grid md:grid-cols-3 container gap-4 my-20">
       {volunteerList.map((item) => (
         <VolunteerCard key={item.name} {...item} />
       ))}

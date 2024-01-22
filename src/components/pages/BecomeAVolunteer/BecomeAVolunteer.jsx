@@ -14,22 +14,24 @@ const BecomeAVolunteer = () => {
     contact: Yup.string().email("Invalid email").required("Enter Your Contact"),
     message: Yup.string().required("Enter A Message"),
   });
+  const initialValues = {
+    name: "",
+    email: "",
+    contact: "",
+    message: "",
+  };
+  const submitHandler = (values) => {
+    console.log(values);
+  };
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 container my-20 gap-16">
       <Image src={assets.Helping} className="rounded-2xl h-full" />
       <div className="md:p-16 p-8 rounded-2xl shadow bg-secondary/80">
         <h2 className="text-2xl font-bold mb-8">Let’s join our community</h2>
         <Formik
-          initialValues={{
-            name: "",
-            email: "",
-            contact: "",
-            message: "",
-          }}
+          initialValues={initialValues}
           validationSchema={SignupSchema}
-          onSubmit={(values) => {
-            console.log(values);
-          }}
+          onSubmit={submitHandler}
         >
           {({}) => (
             <Form className="flex flex-col gap-4 text-primary">

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const HelpNow = () => {
   return (
     <section className="container grid md:grid-cols-2 grid-cols-1 my-20 py-20 text-primary/70 gap-16 bg-primary">
-      <div className="my-auto relative right-8 bg-secondary flex gap-8 justify-end p-8 rounded-r-full overflow-hidden">
+      <div className="my-auto relative right-24 bg-secondary flex gap-8 justify-end p-8 rounded-r-full overflow-hidden">
         <Image src={assets.Helping} width={350} className="rounded-full" />
         <Image src={assets.Helping} width={350} className="rounded-full" />
       </div>

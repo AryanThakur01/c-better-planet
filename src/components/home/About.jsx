@@ -35,11 +35,11 @@ const About = () => {
   ];
   return (
     <section className="container grid md:grid-cols-2 grid-cols-1 my-20 text-primary/70 gap-16">
-      <div className="my-auto p-10 bg-[#e1dbd3] flex justify-end rounded-r-full relative right-8">
+      <div className="my-auto p-10 bg-[#e1dbd3] flex justify-end rounded-r-full relative right-24 w-[110%]">
         <Image
           src={assets.Helping}
           width={1000}
-          className="rounded-full w-[60%]"
+          className="rounded-full w-[80%]"
         />
       </div>
       <div>
@@ -48,7 +48,7 @@ const About = () => {
           <Circle size={16} className="relative right-2" />
           <p className="text-sm">ABOUT CLEAN HEART</p>
         </div>
-        <h2 className="text-3xl md:text-5xl font-bold text-primary my-8">
+        <h2 className="text-3xl md:text-6xl font-bold text-primary my-8">
           Helping Each Other can Make World Better
         </h2>
         <div className="flex gap-4 items-center flex-wrap md:flex-nowrap">

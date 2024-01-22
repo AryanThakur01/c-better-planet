@@ -7,7 +7,7 @@ const page = () => {
   return (
     <>
       <TopCard title="FAQs" image={assets.DonateNow} />
-      <RecentQuestions />
+      <RecentQuestions parentClass="bg-white" />
     </>
   );
 };
