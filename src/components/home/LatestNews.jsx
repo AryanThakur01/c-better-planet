@@ -39,14 +39,14 @@ const LatestNews = () => {
     },
   ];
   return (
-    <section className="container">
+    <section className="container my-20">
       <div className="flex font-bold items-center text-secondary-foreground">
         <Circle size={16} className="relative fill-secondary-foreground" />
         <Circle size={16} className="relative right-2" />
-        <p className="text-sm">OUR LATEST NEWS</p>
+        <p className="text-sm">FURTHER PLANNING FOR</p>
       </div>
       <h2 className="font-bold text-3xl md:text-5xl text-primary my-2 md:w-1/2">
-        Latest News And Articles From Clean Heart
+        Our Objectives
       </h2>
       <Carousel className="w-full my-8 mb-20">
         <CarouselContent className="-ml-1 gap-8">

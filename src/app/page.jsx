@@ -18,9 +18,9 @@ export default function Home() {
       <CompanyBenefits />
       <WhoWeAre />
       {/* <UpcomingEvents /> */}
-      <Testimonials />
-      <HelpingHand />
-      <HelpNow />
+      {/* <Testimonials /> */}
+      {/* <HelpingHand /> */}
+      {/* <HelpNow /> */}
       <LatestNews />
     </main>
   );

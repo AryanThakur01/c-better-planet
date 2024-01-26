@@ -16,10 +16,10 @@ const CompanyBenefits = () => {
         }}
       >
         <div className="bg-black p-8 min-h-60 text-white bg-opacity-75 h-full flex flex-col">
-          <h2 className="text-3xl">Make The Most Out Of Tax Time</h2>
+          <h2 className="text-3xl">Connect With Us</h2>
           <p className="py-4">
-            We help companies develop powerful corporate social responsibility,
-            grantmaking, and employee engagement strategies.
+            Better Planet Society united students, locals, influencers for
+            impactful community drives, expanding reach and awareness.
           </p>
           <ul className="flex justify-between flex-wrap">
             <li className="flex gap-2">
@@ -28,16 +28,16 @@ const CompanyBenefits = () => {
             </li>
             <li className="flex gap-2">
               <Check />
-              <span>Donate Money</span>
+              <span>Become a Volunteer</span>
             </li>
             <li className="flex gap-2">
               <Check />
-              <span>Donate Money</span>
+              <span>Become an Influencer</span>
             </li>
           </ul>
           <hr className="border-none my-4" />
           <Link
-            href="/contact"
+            href="/about"
             className={cn(
               buttonVariants({ variant: "default" }),
               "mt-auto rounded-full h-12 border border-white bg-transparent hover:bg-white hover:text-primary gap-2 flex w-36",
@@ -55,10 +55,10 @@ const CompanyBenefits = () => {
         }}
       >
         <div className="bg-black p-8 min-h-60 text-white bg-opacity-75 h-full">
-          <h2 className="text-3xl">Make A Donate Now</h2>
+          <h2 className="text-3xl">How we measure impact?</h2>
           <p className="py-4">
-            We help companies develop powerful corporate social responsibility,
-            grantmaking, and employee
+            Better Planet Society measures impact through stories, stats, and
+            partner feedback for accountability and improvement.
           </p>
           <CompanyBenefitDonation />
           <hr className="border-none my-4" />

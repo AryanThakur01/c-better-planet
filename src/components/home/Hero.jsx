@@ -15,7 +15,7 @@ const Hero = () => {
     >
       <div className="absolute h-full w-full z-[-1] inset-0 bg-black opacity-65" />
       <Link
-        href="/"
+        href="/contact"
         className={cn(
           buttonVariants({ variant: "outline" }),
           "rounded-full w-56 text-secondary hover:bg-secondary/10 hover:text-secondary font-bold border-secondary bg-transparent",
@@ -23,13 +23,12 @@ const Hero = () => {
       >
         Give a helping hand for child
       </Link>
-      <h1 className="my-4 text-wite font-bold text-4xl md:text-6xl flex flex-col text-white">
-        <span>Lend A Helping Hand</span>
-        <span>To Who Those Need It</span>
+      <h1 className="max-w-[72rem] my-4 text-wite font-bold text-4xl md:text-6xl flex flex-col text-white">
+        Building a better planet through awareness, action, and innovation
       </h1>
       <div>
         <Link
-          href="/"
+          href="/pages/becomeavolunteer"
           className={cn(
             buttonVariants({ variant: "secondary" }),
             "bg-secondary rounded-full flex items-center gap-3 h-14 w-48",

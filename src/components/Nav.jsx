@@ -24,7 +24,9 @@ const Nav = () => {
   ];
   return (
     <nav className="h-20 flex justify-between items-center container sticky top-0 bg-white z-50">
-      <Link href="/">CleenHearts</Link>
+      <Link href="/" className="hover:scale-105 transition-all">
+        BetterPlanet
+      </Link>
       <ul className="container hidden lg:flex justify-end gap-4 text-primary font-semibold">
         {navContent.map((item) => (
           <li key={item.name}>
