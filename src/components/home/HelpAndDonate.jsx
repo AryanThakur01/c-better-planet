@@ -12,7 +12,7 @@ import { assets } from "@/assets/assets";
 const HelpAndDonate = () => {
   const donations = [
     {
-      image: assets.HomeHero,
+      image: assets.CyberSecurity,
       goal: 100,
       raised: 80,
       title: "Cyber security",
@@ -20,7 +20,7 @@ const HelpAndDonate = () => {
         "We combat cyber crimes like hacking, phishing, identity theft, and online fraud. Our focus includes aiding victims, providing training, and promoting awareness about cyber safety and ethics.",
     },
     {
-      image: assets.HomeHero,
+      image: assets.SexualHarassment,
       goal: 100,
       raised: 80,
       title: "Sexual harassment",
@@ -28,7 +28,7 @@ const HelpAndDonate = () => {
         "We combat all forms of sexual harassment—physical, verbal, and online. Our efforts include providing legal aid, counseling, and rehabilitation for survivors, as well as advocating for stronger laws and policies.",
     },
     {
-      image: assets.HomeHero,
+      image: assets.CareerGuide,
       goal: 100,
       raised: 80,
       title: "Career guidance",
@@ -36,7 +36,7 @@ const HelpAndDonate = () => {
         "We inspire students for successful careers through mentoring, opportunities, and skill development, fostering confidence and achieving goals.",
     },
     {
-      image: assets.HomeHero,
+      image: assets.MenstrualHealth,
       goal: 100,
       raised: 80,
       title: "Menstrual health",
@@ -44,7 +44,7 @@ const HelpAndDonate = () => {
         "We educate on menstrual hygiene in underserved areas, providing free or low-cost sanitary products and promoting eco-friendly disposal.",
     },
     {
-      image: assets.HomeHero,
+      image: assets.HabitatConservation,
       goal: 100,
       raised: 80,
       title: "Habitat conservation",
@@ -52,7 +52,7 @@ const HelpAndDonate = () => {
         "We preserve biodiversity by safeguarding habitats and promoting sustainability through practices like organic farming, rainwater harvesting, and waste segregation with composting.",
     },
     {
-      image: assets.HomeHero,
+      image: assets.RecycleReuse,
       goal: 100,
       raised: 80,
       title: "Recycling and reusing",
@@ -65,7 +65,7 @@ const HelpAndDonate = () => {
       <h2 className="text-center text-white text-2xl font-bold">
         OUR PROJECTS
       </h2>
-      <Carousel className="w-full relative top-28 md:px-12 px-4">
+      <Carousel className="w-full md:px-12 px-4 mb-[-8rem]">
         <CarouselContent className="-ml-1 py-8">
           {donations.map((item, index) => (
             <CarouselItem

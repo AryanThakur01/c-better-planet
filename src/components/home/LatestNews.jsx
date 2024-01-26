@@ -13,28 +13,42 @@ import NewsCard from "./NewsCard";
 const LatestNews = () => {
   const donations = [
     {
-      image: assets.HomeHero,
-      title: "Lorem ipsum dolor sit, amet ",
+      image: assets.CyberSecurity,
+      title:
+        "To train, support, and raise awareness on cyber safety and ethics",
+      date: "03 Sep",
+    },
+    {
+      image: assets.HabitatConservation,
+      title:
+        "To campaign, educate, and engage on social and environmental issues",
       date: "03 Sep",
     },
     {
       image: assets.HomeHero,
-      title: "Lorem ipsum dolor sit, amet ",
+      title:
+        "To provide legal aid, counseling, and rehabilitation to survivors of sexual harassment",
       date: "03 Sep",
     },
     {
-      image: assets.HomeHero,
-      title: "Lorem ipsum dolor sit, amet ",
+      image: assets.CareerGuide,
+      title: "To inform, mentor, and empower students for better careers",
       date: "03 Sep",
     },
     {
-      image: assets.HomeHero,
-      title: "Lorem ipsum dolor sit, amet ",
+      image: assets.MenstrualHealth,
+      title:
+        "To distribute sanitary products and promote menstrual health and hygiene",
       date: "03 Sep",
     },
     {
-      image: assets.HomeHero,
-      title: "Lorem ipsum dolor sit, amet ",
+      image: assets.RecycleReuse,
+      title: "To reduce waste and pollution and save resources and energy",
+      date: "03 Sep",
+    },
+    {
+      image: assets.HabitatConservation,
+      title: "To protect and restore forests, wetlands, rivers, and oceans",
       date: "03 Sep",
     },
   ];
@@ -49,7 +63,7 @@ const LatestNews = () => {
         Our Objectives
       </h2>
       <Carousel className="w-full my-8 mb-20">
-        <CarouselContent className="-ml-1 gap-8">
+        <CarouselContent className="-ml-1 gap-8 p-4">
           {donations.map((item, index) => (
             <CarouselItem
               key={index}

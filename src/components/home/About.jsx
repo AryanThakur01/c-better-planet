@@ -34,8 +34,8 @@ const About = () => {
     },
   ];
   return (
-    <section className="container grid md:grid-cols-2 grid-cols-1 my-20 text-primary/70 gap-16">
-      <div className="my-auto p-10 bg-[#e1dbd3] flex justify-end rounded-r-full relative right-24 w-[110%]">
+    <section className="container grid md:grid-cols-2 grid-cols-1 my-20 text-primary/70 gap-16 overflow-hidden">
+      <div className="my-auto p-10 bg-[#e1dbd3] flex justify-end rounded-r-full relative right-20 w-[110%]">
         <Image
           src={assets.Helping}
           width={1000}
@@ -46,7 +46,7 @@ const About = () => {
         <div className="flex font-bold items-center text-secondary-foreground">
           <Circle size={16} className="relative fill-secondary-foreground" />
           <Circle size={16} className="relative right-2" />
-          <p className="text-sm">ABOUT CLEAN HEART</p>
+          <p className="text-sm">ABOUT BETTER PLANET</p>
         </div>
         <h2 className="text-3xl md:text-6xl font-bold text-primary my-8">
           Welcome to The Better Planet

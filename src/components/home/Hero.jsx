@@ -21,7 +21,7 @@ const Hero = () => {
           "rounded-full w-56 text-secondary hover:bg-secondary/10 hover:text-secondary font-bold border-secondary bg-transparent",
         )}
       >
-        Give a helping hand for child
+        Reach out for Queries
       </Link>
       <h1 className="max-w-[72rem] my-4 text-wite font-bold text-4xl md:text-6xl flex flex-col text-white">
         Building a better planet through awareness, action, and innovation

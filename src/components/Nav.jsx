@@ -1,4 +1,4 @@
-import { Heart, Menu, ShoppingCart } from "lucide-react";
+import { ChevronDown, Heart, Menu, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
@@ -8,10 +8,22 @@ const Nav = () => {
   const navContent = [
     { name: "Home", link: "/", subComps: [] },
     { name: "About Us", link: "/about", subComps: [] },
-    { name: "Donations", link: "/donations", subComps: [] },
+    // { name: "Donations", link: "/donations", subComps: [] },
+    // {
+    //   name: "Our Impact",
+    //   link: "",
+    //   icon: <ChevronDown size={16} />,
+    //   subComps: [
+    //     { name: "Cyber Awarness", link: "/pages/ourvolunteer" },
+    //     { name: "Fight Sexual Harassment", link: "/pages/becomeavolunteer" },
+    //     { name: "Inspire Students", link: "/pages/gallery" },
+    //     { name: "Women Support", link: "/pages/faq" },
+    //   ],
+    // },
     {
       name: "Pages",
       link: "",
+      icon: <ChevronDown size={16} />,
       subComps: [
         { name: "Our Volunteer", link: "/pages/ourvolunteer" },
         { name: "Become A Volunteer", link: "/pages/becomeavolunteer" },
@@ -31,7 +43,15 @@ const Nav = () => {
         {navContent.map((item) => (
           <li key={item.name}>
             <div className="group">
-              <Link href={item.link}>{item.name}</Link>
+              <Link
+                href={item.link}
+                className="flex gap-1 items-center group-hover:text-secondary"
+              >
+                <span>{item.name}</span>
+                <span className="group-hover:rotate-180 transition-all">
+                  {item.icon}
+                </span>
+              </Link>
               {item.subComps?.length !== 0 && (
                 <div className="h-0 w-0 relative top-0 hidden group-hover:block hover:block">
                   <div className="bg-white w-max h-fit p-2 flex flex-col gap-1 pt-6 text-sm font-semibold">

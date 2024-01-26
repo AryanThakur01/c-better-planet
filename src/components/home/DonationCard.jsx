@@ -6,10 +6,10 @@ import { ChevronsRight } from "lucide-react";
 
 const DonationCard = ({ image, goal, raised, title, detail }) => {
   return (
-    <div className="border p-4 mx-2 rounded-2xl bg-muted shadow-lg my-4 group h-[96%] flex flex-col">
+    <div className="border p-4 mx-2 rounded-2xl bg-muted shadow-lg my-4 group h-[96%] flex flex-col cursor-default">
       <div className="rounded-2xl overflow-hidden bg-primary">
         <Image
-          src={assets.HomeHero}
+          src={image}
           height={500}
           width={500}
           className="h-60 w-full group-hover:scale-105 group-hover:opacity-50 transition-all duration-500"
@@ -36,13 +36,13 @@ const DonationCard = ({ image, goal, raised, title, detail }) => {
       </a>
       <hr className="border my-2" />
       <p>{detail}</p>
-      <Button
-        variant="outline"
-        className="rounded-full border-primary h-12 flex gap-4 text-md mt-auto w-52"
-      >
-        <ChevronsRight className="bg-secondary rounded-full p-1 h-7 w-7" />
-        <span>Donation details</span>
-      </Button>
+      {/* <Button */}
+      {/*   variant="outline" */}
+      {/*   className="rounded-full border-primary h-12 flex gap-4 text-md mt-auto w-52" */}
+      {/* > */}
+      {/*   <ChevronsRight className="bg-secondary rounded-full p-1 h-7 w-7" /> */}
+      {/*   <span>Donation details</span> */}
+      {/* </Button> */}
     </div>
   );
 };

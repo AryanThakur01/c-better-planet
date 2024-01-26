@@ -12,8 +12,8 @@ const page = () => {
       <TopCard title="About Us" image={assets.HomeHero} />
       <About />
       <Story />
-      <OurTeam />
-      <RecentQuestions />
+      {/* <OurTeam /> */}
+      {/* <RecentQuestions /> */}
     </>
   );
 };

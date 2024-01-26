@@ -28,7 +28,7 @@ const WhoWeAre = () => {
         </div>
         <div className="order-1">
           <Image
-            src={assets.HomeHero}
+            src={assets.MoreAbout}
             height={1000}
             width={1000}
             className="w-full rounded-xl"
@@ -67,7 +67,7 @@ const WhoWeAre = () => {
         </div>
         <div className="order-0">
           <Image
-            src={assets.HomeHero}
+            src={assets.OurMission}
             height={1000}
             width={1000}
             className="w-full rounded-xl"

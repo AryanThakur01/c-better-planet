@@ -12,7 +12,7 @@ const CompanyBenefits = () => {
       <div
         className="border rounded-2xl overflow-hidden"
         style={{
-          background: `url(${assets.TaxBenefit.src})no-repeat center center/cover`,
+          background: `url(${assets.Connect.src})no-repeat center center/cover`,
         }}
       >
         <div className="bg-black p-8 min-h-60 text-white bg-opacity-75 h-full flex flex-col">
@@ -51,21 +51,27 @@ const CompanyBenefits = () => {
       <div
         className="border rounded-2xl overflow-hidden flex flex-col"
         style={{
-          background: `url(${assets.DonateNow.src})no-repeat center center/cover`,
+          background: `url(${assets.ThinkBoy.src})no-repeat center center/cover`,
         }}
       >
-        <div className="bg-black p-8 min-h-60 text-white bg-opacity-75 h-full">
+        <div className="bg-black p-8 min-h-60 text-white bg-opacity-75 h-full flex flex-col">
           <h2 className="text-3xl">How we measure impact?</h2>
           <p className="py-4">
             Better Planet Society measures impact through stories, stats, and
             partner feedback for accountability and improvement.
           </p>
-          <CompanyBenefitDonation />
-          <hr className="border-none my-4" />
-          <Button className="mt-auto rounded-full h-12 border border-white bg-transparent hover:bg-white hover:text-primary gap-2 flex">
+          {/* <CompanyBenefitDonation /> */}
+          {/* <hr className="border-none my-4" /> */}
+          <Link
+            href="/pages/becomeavolunteer"
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "mt-auto rounded-full h-12 border border-white bg-transparent hover:bg-white hover:text-primary gap-2 flex w-fit",
+            )}
+          >
             <ChevronsRight className="bg-secondary rounded-full p-1 h-7 w-7 text-primary" />
-            <span>Donate Now</span>
-          </Button>
+            <span>Join Us</span>
+          </Link>
         </div>
       </div>
     </section>

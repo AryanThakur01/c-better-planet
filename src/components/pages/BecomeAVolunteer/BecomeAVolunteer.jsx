@@ -6,12 +6,14 @@ import InputField from "@/components/InputField";
 import { ChevronsRight } from "lucide-react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
+import { useRouter } from "next/navigation";
 
 const BecomeAVolunteer = () => {
+  const router = useRouter();
   const SignupSchema = Yup.object().shape({
     name: Yup.string().required("Enter Your Name"),
     email: Yup.string().email().required("Enter Your Email"),
-    contact: Yup.string().email("Invalid email").required("Enter Your Contact"),
+    contact: Yup.string().required("Enter your contact"),
     message: Yup.string().required("Enter A Message"),
   });
   const initialValues = {
@@ -21,7 +23,10 @@ const BecomeAVolunteer = () => {
     message: "",
   };
   const submitHandler = (values) => {
-    console.log(values);
+    let body = `Name=${values.name}%0D%0AEmail=${values.email}%0D%0AContact=${values.contact}%0D%0AMessage=${values.message}`;
+    router.push(
+      `mailto:volunteer@cyberjagriti.org?subject=Become A Volunteer&body=${body}`,
+    );
   };
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 container my-20 gap-16">

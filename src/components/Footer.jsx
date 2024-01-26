@@ -27,16 +27,27 @@ const Footer = () => {
         </h3>
         <ul className="my-4 text-muted-foreground text-md flex flex-col gap-2">
           <li className="flex gap-4">
-            <MapPin className="stroke-primary" />
-            <span>Lorem ipsum dolor sit amet. Lorem ipsum </span>
+            <span>
+              <MapPin className="stroke-primary" size={20} />
+            </span>
+            <span>
+              01,2nd floor, ATS Arcade, Sahastradhara Rd, opposite KFC, Govind
+              Vihar, Dehradun, Uttarakhand 248001
+            </span>
           </li>
           <li className="flex gap-3">
-            <PhoneCall className="stroke-primary" size={20} />
-            <span>+91 235678013</span>
+            <span>
+              <PhoneCall className="stroke-primary" size={20} />
+            </span>
+            <Link href="tel:+91 235678013" className="hover:underline">
+              +91 235678013
+            </Link>
           </li>
           <li className="flex gap-3">
-            <Mail className="stroke-primary" />
-            <span>needhelp@company.com</span>
+            <span>
+              <Mail className="stroke-primary" size={20} />
+            </span>
+            <Link href="mailto:">needhelp@company.com</Link>
           </li>
         </ul>
       </div>
@@ -45,21 +56,9 @@ const Footer = () => {
           Quick Links
         </h3>
         <ul className="my-4 text-muted-foreground text-md flex flex-col gap-2">
-          <li className="flex gap-4">
-            <span>About Us</span>
-          </li>
-          <li className="flex gap-3">
-            <span>Give Donation</span>
-          </li>
-          <li className="flex gap-3">
-            <span>Education Support</span>
-          </li>
-          <li className="flex gap-3">
-            <span>Our Campaign</span>
-          </li>
-          <li className="flex gap-3">
-            <span>Contact Us</span>
-          </li>
+          <NavLink link="/home" text="Home" />
+          <NavLink link="/about" text="About Us" />
+          <NavLink link="/donations" text="Donations" />
         </ul>
       </div>
       <div>
@@ -74,6 +73,14 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+  );
+};
+
+const NavLink = ({ link, text }) => {
+  return (
+    <li className="flex gap-3">
+      <Link href={link}>{text}</Link>
+    </li>
   );
 };
 
