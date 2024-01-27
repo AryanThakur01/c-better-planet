@@ -17,7 +17,7 @@ const NewsCard = ({ image, title, date }) => {
           src={image}
           height={400}
           width={400}
-          className="w-full group-hover:scale-110 transition-all duration-500"
+          className="w-full group-hover:scale-110 transition-all duration-500 h-64"
         />
       </div>
       <Link

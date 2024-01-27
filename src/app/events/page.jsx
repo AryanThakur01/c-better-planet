@@ -6,7 +6,7 @@ import EventList from "@/components/events/EventList";
 const page = () => {
   return (
     <>
-      <TopCard image={assets.HomeHero} title="Events" />
+      <TopCard image={assets.EventHero} title="Events" />
       <EventList />
     </>
   );

@@ -17,7 +17,7 @@ const EventList = () => {
     // },
     {
       title: "Blanket distribution drive",
-      image: assets.HomeHero,
+      image: assets.BlanketDistribution,
       venue: "Rajpur || Raipur || Premnagar || ISBT || Haldwani",
       paras: [
         "As a part of our ongoing commitment to the welfare of the community, our NGO launched a blanket distribution initiative to provide warmth and comfort to those living in vulnerable conditions.",
@@ -26,7 +26,7 @@ const EventList = () => {
     },
     {
       title: "Cloth Donation Drive",
-      image: assets.HomeHero,
+      image: assets.ClothDonation,
       venue: "Rajpur, near Sai Mandir.",
       paras: [
         "Our NGO is grateful for the active participation and generous contribution of kind-hearted individuals, who have enhanced the impact and reach of our efforts.",
@@ -35,7 +35,7 @@ const EventList = () => {
     },
     {
       title: "Food Drive",
-      image: assets.HomeHero,
+      image: assets.FoodDrive,
       venue: "ISBT and Premnagar",
       paras: [
         "Through the dedicated efforts of our core volunteers, The Better Planet Society successfully organized food drives, providing nourishment to 80 individuals in need.",

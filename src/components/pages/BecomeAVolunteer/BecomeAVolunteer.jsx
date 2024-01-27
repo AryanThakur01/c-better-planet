@@ -30,7 +30,10 @@ const BecomeAVolunteer = () => {
   };
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 container my-20 gap-16">
-      <Image src={assets.Helping} className="rounded-2xl h-full" />
+      <Image
+        src={assets.BecomeVolunteer}
+        className="rounded-2xl h-full max-h-[44rem]"
+      />
       <div className="md:p-16 p-8 rounded-2xl shadow bg-secondary/80">
         <h2 className="text-2xl font-bold mb-8">Let’s join our community</h2>
         <Formik

@@ -9,7 +9,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <TopCard title="About Us" image={assets.HomeHero} />
+      <TopCard title="About Us" image={assets.AboutHero} />
       <About />
       <Story />
       {/* <OurTeam /> */}

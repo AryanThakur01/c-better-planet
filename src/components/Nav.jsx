@@ -1,10 +1,14 @@
-import { ChevronDown, Heart, Menu, ShoppingCart } from "lucide-react";
+"use client";
+import { ChevronDown, Heart, Menu } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import MobileNavMenu from "./MobileNavMenu";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
+  const path = usePathname();
   const navContent = [
     { name: "Home", link: "/", subComps: [] },
     { name: "About Us", link: "/about", subComps: [] },
@@ -45,7 +49,15 @@ const Nav = () => {
             <div className="group">
               <Link
                 href={item.link}
-                className="flex gap-1 items-center group-hover:text-secondary"
+                className={cn(
+                  "flex gap-1 items-center group-hover:text-secondary",
+                  (item.link === path ||
+                    (item.subComps[0] &&
+                      path.match(
+                        `/${item.subComps[0].link.split("/")[1]}/*`,
+                      ))) &&
+                    "text-secondary",
+                )}
               >
                 <span>{item.name}</span>
                 <span className="group-hover:rotate-180 transition-all">
@@ -58,7 +70,10 @@ const Nav = () => {
                     {item.subComps.map((sub) => (
                       <Link
                         href={sub.link}
-                        className="hover:bg-secondary flex gap-2 p-2"
+                        className={cn(
+                          "hover:bg-secondary flex gap-2 p-2",
+                          sub.link === path && "bg-secondary",
+                        )}
                         key={sub.name}
                       >
                         <span>{sub.name}</span>
@@ -72,9 +87,25 @@ const Nav = () => {
         ))}
       </ul>
       <div className="flex gap-4">
-        <Button variant={"outline"}>
-          <ShoppingCart />
-        </Button>
+        <Link
+          href="https://www.instagram.com/cyberjagriti"
+          className={cn(buttonVariants({ variant: "ghost" }), "w-10 p-2")}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="stroke-2 stroke-primary"
+          >
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+        </Link>
         <Button className="hidden md:flex items-center gap-2 bg-secondary hover:bg-secondary text-primary">
           <span className="bg-primary rounded-full p-1">
             <Heart fill="white" size={16} />

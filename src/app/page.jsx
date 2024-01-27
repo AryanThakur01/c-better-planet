@@ -1,6 +1,6 @@
 import About from "@/components/home/About";
 import CompanyBenefits from "@/components/home/CompanyBenefits";
-import HelpAndDonate from "@/components/home/HelpAndDonate";
+import OurProjects from "@/components/home/HelpAndDonate";
 import HelpNow from "@/components/home/HelpNow";
 import HelpingHand from "@/components/home/HelpingHand";
 import Hero from "@/components/home/Hero";
@@ -14,7 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <About />
-      <HelpAndDonate />
+      <OurProjects />
       <CompanyBenefits />
       <WhoWeAre />
       {/* <UpcomingEvents /> */}

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import emblaCarouselAutoplay from "embla-carousel-autoplay";
 
 const Testimonials = () => {
   const [api, setApi] = useState();
@@ -88,7 +89,7 @@ const Testimonials = () => {
             <div className="flex font-bold items-center">
               <Circle size={16} className="relative fill-white" />
               <Circle size={16} className="relative right-2" />
-              <span>Testimonials</span>
+              <span>Departments</span>
             </div>
             <h2 className="text-3xl md:text-5xl my-4 font-bold">
               Departments Of Better Planet NGO
@@ -97,14 +98,22 @@ const Testimonials = () => {
           <div
             className="flex justify-center w-full h-full rounded-full"
             style={{
-              background: `url(${assets.Lifestyle.src})no-repeat center center/cover`,
+              background: `url(${assets.Department.src})no-repeat center center/cover`,
             }}
           >
             {/* <Image src={} className="rounded-full h-40 w-max" /> */}
           </div>
         </div>
         <div>
-          <Carousel className="w-full p-8 md:p-16" setApi={setApi}>
+          <Carousel
+            className="w-full p-8 md:p-16"
+            setApi={setApi}
+            plugins={[
+              emblaCarouselAutoplay({
+                delay: 2000,
+              }),
+            ]}
+          >
             <CarouselContent className="-ml-1 mt-8">
               {departments.map((item, index) => (
                 <CarouselItem key={index} className="px-1">
@@ -143,7 +152,10 @@ const Testimonials = () => {
                   {/* {JSON.stringify(item.review)} */}
                   <div className="my-8 pr-10 flex flex-col gap-2">
                     {item.review.map((rev) => (
-                      <p className="text-xl text-muted-foreground" key={rev}>
+                      <p
+                        className="text-xl text-muted-foreground select-none"
+                        key={rev}
+                      >
                         {rev}
                       </p>
                     ))}

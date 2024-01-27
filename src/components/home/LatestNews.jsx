@@ -25,7 +25,7 @@ const LatestNews = () => {
       date: "03 Sep",
     },
     {
-      image: assets.HomeHero,
+      image: assets.SexualHarassment2,
       title:
         "To provide legal aid, counseling, and rehabilitation to survivors of sexual harassment",
       date: "03 Sep",
@@ -62,7 +62,7 @@ const LatestNews = () => {
       <h2 className="font-bold text-3xl md:text-5xl text-primary my-2 md:w-1/2">
         Our Objectives
       </h2>
-      <Carousel className="w-full my-8 mb-20">
+      <Carousel className="md:px-12 px-4 w-full my-8 mb-20">
         <CarouselContent className="-ml-1 gap-8 p-4">
           {donations.map((item, index) => (
             <CarouselItem
@@ -73,8 +73,8 @@ const LatestNews = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* <CarouselPrevious /> */}
-        {/* <CarouselNext /> */}
+        <CarouselPrevious className="md:left-2 left-[-1rem] " />
+        <CarouselNext className="md:right-2 right-[-1rem] " />
       </Carousel>
     </section>
   );

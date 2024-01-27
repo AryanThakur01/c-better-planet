@@ -20,10 +20,10 @@ const EventCard = ({ title, date, time, venue, image, paras }) => {
           </p>
         )}
       </div>
-      <div className="overflow-hidden bg-black">
+      <div className="overflow-hidden bg-black h-60">
         <Image
           src={image}
-          className="group-hover:rotate-1 group-hover:scale-105 transition-all duration-500 cursor-pointer opacity-80"
+          className="group-hover:rotate-1 group-hover:scale-105 transition-all duration-500 cursor-pointer opacity-80 w-full min-h-full"
         />
       </div>
       <div className="my-2 p-8 pb-0">
